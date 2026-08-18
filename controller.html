@@ -1,0 +1,5 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ECB Instructor</title><link rel="stylesheet" href="controller.css"></head>
+<body><header class="top"><b>ECB INSTRUCTOR CONTROLLER</b></header><div class="wrap"><div class="card"><div class="head"><div><h1>Instructor Control</h1><div class="small" id="status">Connecting…</div></div></div>
+<div class="section"><label>SIMULATED AIR CONSUMPTION</label><div class="rate"><button onclick="changeRate(-5)">−5</button><input id="rate" type="number" min="10" max="150" onchange="rateInput(this.value)"><button onclick="changeRate(5)">+5</button></div><div class="small" id="rateLabel">—</div></div>
+<div class="section" id="controls"></div><div class="section"><button class="wide" style="background:#e21b23;color:#fff" onclick="evacAll()">EVACUATE ALL</button><button class="wide" onclick="reset()">RESET BLANK BOARD</button></div><div class="section"><div class="small">EVENT LOG</div><div id="log" class="log"></div></div>
+</div></div><script type="module" src="controller.js"></script></body></html>

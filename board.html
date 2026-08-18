@@ -1,0 +1,11 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ECB Board</title><link rel="stylesheet" href="board.css"></head>
+<body><header class="top"><b>ECB TRAINING SIMULATOR</b><span>● LIVE BOARD</span></header><div class="wrap"><div class="board">
+<div class="head"><div><div class="sub">ECB ALPHA · <span id="session"></span></div><div class="clock" id="clock">--:--:--</div><div class="sub">Simulated air consumption: <span id="rate"></span></div></div><div><img class="qr" id="qr"><div class="sub" style="max-width:150px">Scan for instructor control</div></div></div>
+<div class="sub" style="padding:10px 3px">The ECO operates this board. The instructor controls the simulation from a separate phone.</div>
+<div id="slots" class="slots"></div>
+<div style="padding:10px 0"><label class="sub">Display</label><select onchange="setDisplay(this.value)" style="background:#111;color:#fff;padding:8px"><option value="tow">Time of Whistle</option><option value="ttw">Time to Whistle</option><option value="elapsed">Elapsed Time</option></select> <button onclick="evacuateAll()">EVACUATE ALL</button> <button onclick="resetBoard()">RESET</button></div>
+<div class="sub">Controller link: <a id="qrLink" href="#"></a></div>
+<div id="log"></div></div></div>
+<div class="modal" id="modal"><div class="dialog"><h2>Insert Tally <span id="modalSlot"></span></h2><label>Wearer name<input id="name"></label><label>Team<select id="team"><option>ALPHA</option><option>BRAVO</option><option>CHARLIE</option></select></label><label>Initial pressure<input id="pressureInput" type="number" value="300"></label><label>Time in<input id="timeIn" type="datetime-local"></label><div class="buttons"><button class="secondary" onclick="closeModal()">CANCEL</button><button class="primary" onclick="insertTally()">INSERT</button></div></div></div>
+<div id="error" style="color:#f66;text-align:center"></div>
+<script type="module" src="board.js"></script></body></html>
